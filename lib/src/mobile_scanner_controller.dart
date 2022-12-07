@@ -280,7 +280,7 @@ class MobileScannerController {
         _barcodesController.add(
           BarcodeCapture(
             barcodes: parsed,
-            image: event['image'] as Uint8List?,
+            image: event['image'] ?? null,
           ),
         );
         break;

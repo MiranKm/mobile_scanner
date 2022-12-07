@@ -59,7 +59,7 @@ class _MobileScannerState extends State<MobileScanner>
   @override
   void initState() {
     super.initState();
-    WidgetsBinding?.instance?.addObserver(this);
+    WidgetsBinding!.instance!.addObserver(this);
     controller = widget.controller ??
         MobileScannerController(onPermissionSet: widget.onPermissionSet);
     if (!controller.isStarting) {
@@ -151,7 +151,7 @@ class _MobileScannerState extends State<MobileScanner>
   @override
   void dispose() {
     controller.dispose();
-    WidgetsBinding?.instance?.removeObserver(this);
+    WidgetsBinding!.instance!.removeObserver(this);
     super.dispose();
   }
 }
